@@ -54,12 +54,13 @@ $basketPlay = [
 </head>
 
 <body>
-<?php 
-    for($i = 0; $i < count($basketPlay); $i++){
+    <?php
+    for ($i = 0; $i < count($basketPlay); $i++) {
         echo $basketPlay[$i]["place"] . ' '  . $basketPlay[$i]["homeTeam"] . ' - ' . $basketPlay[$i]["foreignTeam"] . ' | ' . $basketPlay[$i]["homeTeamPoints"] . ' - ' . $basketPlay[$i]["foreignTeamPoints"] . '</br>';
-        };
-  
-  ?>
+    };
+
+    ?>
+
 
 </body>
 
