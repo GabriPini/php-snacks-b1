@@ -53,18 +53,26 @@ $posts = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snack-3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 
-
+<div class="container mt-5">
+    
     <?php foreach ($posts as $key => $value) : ?>
-      <h2>  <?= $key ?> : </h2>
-      <?php foreach ($value as $key => $post) : ?>
-            <h3> <?= $post['title']; ?></h3>
-            <p> <?= $post['author']; ?></p>
-            <p> <?= $post['text']; ?></p>
-        <?php endforeach; ?>
+
+    <div class="card shadow-lg bg-body w-50 text-center p-4  my-2 border-4 border-primary m-auto">
+        
+        <h2 class="border-bottom  border-primary border-3" >  <?= $key ?> : </h2>
+        <?php foreach ($value as $key => $post) : ?>
+              <h3> <?= $post['title']; ?></h3>
+              <p> <?= $post['author']; ?></p>
+              <em class="border-bottom  border-danger border-2"> <?= $post['text']; ?></em>
+          <?php endforeach; ?>
+    </div>
+    
     <?php endforeach; ?>
+</div>
     
 </body>
 </html>
