@@ -8,17 +8,17 @@ Creare un array contenente qualche alunno di un’ipotetica classe.
     [
         'name'=> 'Luke',
         'lastname' => 'Skywalker',
-        'grades' => [6,4,6],
+        'grades' => [6,4,6,7],
     ],
     [
         'name'=> 'Mando',
         'lastname' => 'TheMandalorian',
-        'grades' => [9,8,9],
+        'grades' => [9,8,9,9],
     ],
     [
         'name'=> 'Obi Wan',
         'lastname' => 'Kenobi',
-        'grades' => [10,9,10],
+        'grades' => [10,9,10,10],
     ],
     [
         'name'=> 'Boba',
@@ -41,8 +41,7 @@ for($i=0; $i < count($students); $i++){
 
     }
 
-    echo('<p>' . $students[$i]['name'] . ' ' . $students[$i]['lastname'] . ' - ' . $sum  .'</p>'); 
-
+    echo('<h2>' . $students[$i]['name'] . ' ' . $students[$i]['lastname'] . ' - ' . $sum  .'</h2>'); 
 };
 
 ?>

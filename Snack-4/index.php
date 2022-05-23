@@ -13,7 +13,7 @@ while(count($randomNumbers) < 15){
         $randomNumbers[] = $random;
     };
     
+    sort($randomNumbers);
 };
-
 var_dump($randomNumbers);
 ?>
