@@ -45,7 +45,7 @@ $db = [
 <?php foreach ($db as $key => $value) : ?>
     <div class="bg-<?= $key === 'teachers' ? 'secondary' : 'success' ?> text-center p-5">
         <?php foreach ($value as $contents) : ?>
-            <h2 class="p-5"><?= $contents['name'] . $contents['lastname'] ?> </h2>
+            <h2 class="p-5"><?= $contents['name'] .' ' . $contents['lastname'] ?> </h2>
         <?php endforeach; ?>
     </div>
 <?php endforeach; ?>
