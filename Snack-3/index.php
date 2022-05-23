@@ -1,5 +1,5 @@
 <!-- ## Snack 3
-Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-2007 e come valore un array di post associati a quella data. Stampare ogni data con i relativi post.
+Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-3007 e come valore un array di post associati a quella data. Stampare ogni data con i relativi post.
  -->
 
 <?php
@@ -10,36 +10,42 @@ $posts = [
         [
             'title' => 'Post 1',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 1'
+            'text' => 'Testo post 1',
+            'img' => '<img src="https://picsum.photos/400/200" alt="">'
         ],
         [
             'title' => 'Post 2',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 2'
+            'text' => 'Testo post 2',
+            'img' => '<img src="https://picsum.photos/400/200" alt="">'
         ],
     ],
     '10/02/2019' => [
         [
             'title' => 'Post 3',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 3'
+            'text' => 'Testo post 3',
+            'img' => '<img src="https://picsum.photos/400/200" alt="">'
         ]
     ],
     '15/05/2019' => [
         [
             'title' => 'Post 4',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 4'
+            'text' => 'Testo post 4',
+            'img' => '<img src="https://picsum.photos/400/200" alt="">'
         ],
         [
             'title' => 'Post 5',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 5'
+            'text' => 'Testo post 5',
+            'img' => '<img src="https://picsum.photos/400/200" alt="">'
         ],
         [
             'title' => 'Post 6',
             'author' => 'Michele Papagni',
-            'text' => 'Testo post 6'
+            'text' => 'Testo post 6',
+            'img' => '<img src="https://picsum.photos/400/200" alt="">'
         ]
     ],
 ];
@@ -57,17 +63,23 @@ $posts = [
 </head>
 <body>
 
+
+
 <div class="container mt-5">
     
-    <?php foreach ($posts as $key => $value) : ?>
-
-    <div class="card shadow-lg bg-body w-50 text-center p-4  my-2 border-4 border-primary m-auto">
+    <?php foreach ($posts as $date => $posts) : ?>
         
-        <h2 class="border-bottom  border-primary border-3" >  <?= $key ?> : </h2>
-        <?php foreach ($value as $key => $post) : ?>
-              <h3> <?= $post['title']; ?></h3>
-              <p> <?= $post['author']; ?></p>
-              <em class="border-bottom  border-danger border-2"> <?= $post['text']; ?></em>
+        <h2 class="border-bottom  border-primary border-3" >  <?= $date ?> : </h2>
+    <div class=" d-flex  w-50 text-center   my-2 border-4 border-primary ">
+        
+        <?php foreach ($posts as $post) : ?>
+            <div class="col-6 card shadow-lg  my-2 mx-1 py-3">
+                
+                <?= $post['img']; ?>
+                <h3> <?= $post['title']; ?></h3>
+                <p> <?= $post['author']; ?></p>
+                <em> <?= $post['text']; ?></em>
+            </div>
           <?php endforeach; ?>
     </div>
     
